@@ -6,9 +6,11 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 const getQuestionAndAnswer = () => {
   const makeQuestion = generateRandom();
+  console.log(makeQuestion);
   const rigthAnswer = isEven(makeQuestion) ? 'yes' : 'no';
 
   return { makeQuestion, rigthAnswer };
 };
 
-export default () => startGame(getQuestionAndAnswer, description);
+const startEvenGame = () => startGame(getQuestionAndAnswer, description);
+export default startEvenGame;
