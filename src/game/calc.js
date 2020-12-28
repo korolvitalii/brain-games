@@ -20,10 +20,10 @@ const getQuestionAndAnswer = () => {
   const num1 = generateRandom();
   const num2 = generateRandom();
   const operator = generateRandomOperator;
-  const makeQuestion = `${num1}${operator}${num2}`;
+  const makeQuestion = `${num1} ${operator} ${num2}`;
   const rigthAnswer = calculate(num1, num2, operator);
 
   return [makeQuestion, rigthAnswer];
 };
 
-export default [description, getQuestionAndAnswer];
+export default () => [description, getQuestionAndAnswer];

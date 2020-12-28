@@ -11,6 +11,9 @@ export default (game) => {
     const [makeQuestion, rigthAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${makeQuestion}`);
     const answer = readlineSync.question('Your answer:');
+    // console.log(`answer!!!!!!${answer}!!!!!!`);
+    // console.log(`rigthAnswer!!!!!!${rigthAnswer}!!!!!!`);
+    // console.log(answer === rigthAnswer);
     if (answer === rigthAnswer) {
       console.log('Correct!!!');
     } else {
