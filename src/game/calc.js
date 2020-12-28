@@ -15,8 +15,7 @@ const calculate = (number1, number2, operator) => {
   }
 };
 const description = 'What is the result of the expression?';
-
-const getQuestionAndAnswer () => {
+const getQuestionAndAnswer = () => {
   const num1 = generateRandom();
   const num2 = generateRandom();
   const operator = generateRandomOperator;
