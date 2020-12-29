@@ -22,8 +22,9 @@ const getQuestionAndAnswer = () => {
   const operator = generateRandomOperator;
   const makeQuestion = `${num1} ${operator} ${num2}`;
   const rigthAnswer = calculate(num1, num2, operator);
+  const rigthAnswerToString = rigthAnswer.toString();
 
-  return [makeQuestion, rigthAnswer];
+  return [makeQuestion, rigthAnswerToString];
 };
 
 export default () => [description, getQuestionAndAnswer];
