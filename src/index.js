@@ -19,5 +19,5 @@ export default (game) => {
       return;
     }
   }
-  console.log(`Congratulation ${playerName}. You Win!`);
+  console.log(`Congratulation ${playerName}!`);
 };
