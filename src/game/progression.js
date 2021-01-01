@@ -1,6 +1,6 @@
 import random from '../utils.js';
 
-const makeQuestionSymbols = (num, k) => {
+const generateProgression = (num, k) => {
   const result = [];
   for (let i = num; i <= num + (k * 10); i += k) {
     result.push(i);
@@ -10,9 +10,9 @@ const makeQuestionSymbols = (num, k) => {
 
 const description = 'What number is missing in the progression?';
 const getQuestionAndAnswer = () => {
-  const questionSymbols = makeQuestionSymbols(random(), random(2, 4));
+  const questionSymbols = generateProgression(random(), random(2, 4));
   const secretSymbol = random(1, 10);
-  const makeQuestionWithSecretSymbol = (array) => array.reduce((acc, elem, index) => {
+  const addHiddenSymbol = (array) => array.reduce((acc, elem, index) => {
     if (index === secretSymbol) {
       acc.push('..');
     } else {
@@ -20,7 +20,7 @@ const getQuestionAndAnswer = () => {
     }
     return acc;
   }, []);
-  const makeQuestion = makeQuestionWithSecretSymbol(questionSymbols).join(' ');
+  const makeQuestion = addHiddenSymbol(questionSymbols).join(' ');
   const rigthAnswer = questionSymbols[secretSymbol].toString();
 
   return [makeQuestion, rigthAnswer];
